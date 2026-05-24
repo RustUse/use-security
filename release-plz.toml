@@ -1,0 +1,8 @@
+[workspace]
+changelog_update = true
+dependencies_update = true
+pr_labels = ["release"]
+
+[[package]]
+name = "use-security"
+changelog_path = "CHANGELOG.md"

@@ -1,0 +1,18 @@
+[package]
+name = "use-threat"
+description = "Threat modeling and threat-category primitives for RustUse"
+publish = true
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+documentation.workspace = true
+rust-version.workspace = true
+readme = "README.md"
+keywords = ["threat", "security", "modeling", "metadata"]
+categories = ["development-tools", "data-structures"]
+
+[lints]
+workspace = true

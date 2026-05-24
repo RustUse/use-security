@@ -1,0 +1,67 @@
+[package]
+name = "use-security"
+description = "Feature-gated facade crate for RustUse security primitives"
+publish = true
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+documentation.workspace = true
+rust-version.workspace = true
+readme = "README.md"
+keywords = ["security", "cve", "cwe", "cvss", "facade"]
+categories = ["development-tools", "data-structures"]
+
+[package.metadata.docs.rs]
+all-features = true
+
+[features]
+default = []
+authn = ["dep:use-authn"]
+authz = ["dep:use-authz"]
+crypto = ["dep:use-crypto"]
+cve = ["dep:use-cve"]
+cvss = ["dep:use-cvss"]
+cwe = ["dep:use-cwe"]
+owasp = ["dep:use-owasp"]
+risk = ["dep:use-security-risk"]
+threat = ["dep:use-threat"]
+finding = ["dep:use-security-finding"]
+secret = ["dep:use-secret"]
+security-header = ["dep:use-security-header"]
+sbom = ["dep:use-sbom"]
+full = [
+    "authn",
+    "authz",
+    "crypto",
+    "cve",
+    "cvss",
+    "cwe",
+    "owasp",
+    "risk",
+    "threat",
+    "finding",
+    "secret",
+    "security-header",
+    "sbom",
+]
+
+[dependencies]
+use-authn = { workspace = true, optional = true }
+use-authz = { workspace = true, optional = true }
+use-crypto = { workspace = true, optional = true }
+use-cve = { workspace = true, optional = true }
+use-cvss = { workspace = true, optional = true }
+use-cwe = { workspace = true, optional = true }
+use-owasp = { workspace = true, optional = true }
+use-sbom = { workspace = true, optional = true }
+use-secret = { workspace = true, optional = true }
+use-security-finding = { workspace = true, optional = true }
+use-security-header = { workspace = true, optional = true }
+use-security-risk = { workspace = true, optional = true }
+use-threat = { workspace = true, optional = true }
+
+[lints]
+workspace = true

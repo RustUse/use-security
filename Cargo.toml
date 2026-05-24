@@ -1,0 +1,82 @@
+[workspace]
+members = [
+    "crates/use-security",
+    "crates/use-cve",
+    "crates/use-cwe",
+    "crates/use-cvss",
+    "crates/use-owasp",
+    "crates/use-security-risk",
+    "crates/use-threat",
+    "crates/use-security-finding",
+    "crates/use-authn",
+    "crates/use-authz",
+    "crates/use-secret",
+    "crates/use-crypto",
+    "crates/use-security-header",
+    "crates/use-sbom",
+]
+resolver = "2"
+
+[workspace.package]
+authors = ["RustUse Contributors"]
+edition = "2024"
+homepage = "https://rustuse.org"
+license = "MIT OR Apache-2.0"
+documentation = "https://rustuse.org"
+publish = false
+readme = "README.md"
+repository = "https://github.com/RustUse/use-security"
+rust-version = "1.95.0"
+version = "0.0.1"
+
+[workspace.dependencies]
+use-authn = { version = "0.0.1", path = "crates/use-authn" }
+use-authz = { version = "0.0.1", path = "crates/use-authz" }
+use-crypto = { version = "0.0.1", path = "crates/use-crypto" }
+use-cve = { version = "0.0.1", path = "crates/use-cve" }
+use-cvss = { version = "0.0.1", path = "crates/use-cvss" }
+use-cwe = { version = "0.0.1", path = "crates/use-cwe" }
+use-owasp = { version = "0.0.1", path = "crates/use-owasp" }
+use-sbom = { version = "0.0.1", path = "crates/use-sbom" }
+use-secret = { version = "0.0.1", path = "crates/use-secret" }
+use-security-finding = { version = "0.0.1", path = "crates/use-security-finding" }
+use-security-header = { version = "0.0.1", path = "crates/use-security-header" }
+use-security-risk = { version = "0.0.1", path = "crates/use-security-risk" }
+use-threat = { version = "0.0.1", path = "crates/use-threat" }
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+
+[workspace.lints.clippy]
+all = { level = "warn", priority = -1 }
+cargo = { level = "warn", priority = -1 }
+expect_used = "allow"
+float_cmp = "allow"
+multiple_crate_versions = "allow"
+nursery = { level = "warn", priority = -1 }
+pedantic = { level = "warn", priority = -1 }
+missing_const_for_fn = "allow"
+missing_errors_doc = "allow"
+todo = "deny"
+unimplemented = "deny"
+unwrap_used = "warn"
+
+[workspace.metadata.rustuse.release]
+publish = false
+versioning = "lockstep-0.x"
+first-publish-candidates = [
+    "use-cve",
+    "use-cwe",
+    "use-cvss",
+    "use-owasp",
+    "use-security-risk",
+    "use-threat",
+    "use-security-finding",
+    "use-authn",
+    "use-authz",
+    "use-secret",
+    "use-crypto",
+    "use-security-header",
+    "use-sbom",
+    "use-security",
+]

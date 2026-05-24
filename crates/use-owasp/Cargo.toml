@@ -1,0 +1,18 @@
+[package]
+name = "use-owasp"
+description = "OWASP category and application-security taxonomy primitives for RustUse"
+publish = true
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+documentation.workspace = true
+rust-version.workspace = true
+readme = "README.md"
+keywords = ["owasp", "security", "taxonomy", "web"]
+categories = ["development-tools", "data-structures", "web-programming"]
+
+[lints]
+workspace = true

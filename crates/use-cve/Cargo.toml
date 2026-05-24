@@ -1,0 +1,18 @@
+[package]
+name = "use-cve"
+description = "CVE identifier and vulnerability metadata primitives for RustUse"
+publish = true
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+documentation.workspace = true
+rust-version.workspace = true
+readme = "README.md"
+keywords = ["cve", "security", "vulnerability", "identifier"]
+categories = ["development-tools", "data-structures", "parsing"]
+
+[lints]
+workspace = true
