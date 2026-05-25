@@ -297,7 +297,7 @@ fn parse_number(input: &str) -> Result<CweNumber, CweIdError> {
 #[cfg(test)]
 mod tests {
     use super::{
-        CweId, CweIdError, CweWeaknessKind, CWE_352_CSRF, CWE_79_XSS, CWE_89_SQL_INJECTION,
+        CWE_79_XSS, CWE_89_SQL_INJECTION, CWE_352_CSRF, CweId, CweIdError, CweWeaknessKind,
     };
 
     #[test]

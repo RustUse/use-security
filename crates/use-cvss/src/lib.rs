@@ -305,7 +305,7 @@ text_newtype!(CvssMetricValue);
 #[cfg(test)]
 mod tests {
     use super::{
-        severity_from_score, CvssAttackVector, CvssScore, CvssScoreError, CvssSeverity, CvssVector,
+        CvssAttackVector, CvssScore, CvssScoreError, CvssSeverity, CvssVector, severity_from_score,
     };
 
     #[test]
